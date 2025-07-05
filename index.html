@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Contact Us</h1>
+    <form id="myForm">
+      <div class="form-group full-width">
+        <div class="side">
+          <label class="label" for="first-name">First Name *</label>
+          <input id="first-name" name="first-name" type="text" class="form-element" pattern="^[A-Za-z'\-]+$" required>
+        </div>
+        <div class="side">
+          <label class="label" for="last-name">Last Name *</label>
+          <input id="last-name" name="last-name" type="text" class="form-element" pattern="^[A-Za-z'\-]+$" required>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label class="label" for="email">Email Address *</label><br>
+        <input id="email" name="email" type="email" class="form-element" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required>
+      </div>
+      <div class="form-group">
+        <label>Query Type *</label>
+      </div>
+      <div class="form-group full-width">
+        <label class="radio-button">
+          <input type="radio" name="query-type" value="general-enquiry" required>
+          <span>General Enquiry</span>
+        </label>
+      
+        <label class="radio-button">
+          <input type="radio" name="query-type" value="support-request" required>
+          <span>Support Request</span>
+        </label>
+      </div>
+            
+  
+      <div class="form-group">
+        <label class="label" for="message">Message *</label><br>
+        <textarea id="message" name="message" class="form-element" cols="100" required></textarea>
+      </div>
+
+      <div class="form-group checkgroup label">
+        <input id="checkbx" name="checkbx" type="checkbox" required>
+        <label class="checkbox-label" for="checkbx"> 
+          <span>I consent to being contacted by the team</span>
+        </label>
+      </div>
+      
+      <div class="submit-button">
+        <button type="submit" id="submit">Submit</button>
+      </div>
+  
+    </form>
+  </div>
+  <!-- Contact Us
+
+  First Name
+  This field is required
+
+  Last Name
+  This field is required
+
+  Email Address
+  Please enter a valid email address
+  This field is required
+
+  Query Type
+  General Enquiry
+  Support Request
+  Please select a query type
+
+  Message
+  This field is required
+
+  I consent to being contacted by the team
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon! -->
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/shukri-isse" target="_blank">Shukri Isse</a>.
+  </div>
+</body>
+</html>
