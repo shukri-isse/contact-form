@@ -18,47 +18,54 @@
 <body>
   <div class="container">
     <h1>Contact Us</h1>
-    <form id="myForm">
+    <!--novalidate disables built in pop up error messages and lets you  create ur own-->
+    <form id="my-form" novalidate>
       <div class="form-group full-width">
         <div class="side">
           <label class="label" for="first-name">First Name *</label>
           <input id="first-name" name="first-name" type="text" class="form-element" pattern="^[A-Za-z'\-]+$" required>
+          <!--include span for error message-->
+          <span class="error-message" id="first-name-error"></span>
         </div>
         <div class="side">
           <label class="label" for="last-name">Last Name *</label>
           <input id="last-name" name="last-name" type="text" class="form-element" pattern="^[A-Za-z'\-]+$" required>
+          <span class="error-message" id="last-name-error"></span>
         </div>
       </div>
       
       <div class="form-group">
         <label class="label" for="email">Email Address *</label><br>
         <input id="email" name="email" type="email" class="form-element" pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$" required>
+        <span class="error-message" id="email-error"></span>
       </div>
       <div class="form-group">
         <label>Query Type *</label>
       </div>
       <div class="form-group full-width">
         <label class="radio-button">
-          <input type="radio" name="query-type" value="general-enquiry" required>
+          <input id="general-inquiry" type="radio" name="query-type" value="general-enquiry" required>
           <span>General Enquiry</span>
         </label>
       
         <label class="radio-button">
-          <input type="radio" name="query-type" value="support-request" required>
+          <input id="support-request" type="radio" name="query-type" value="support-request" required>
           <span>Support Request</span>
         </label>
       </div>
-            
+      <span class="error-message" id="radio-button-error"></span>      
   
       <div class="form-group">
         <label class="label" for="message">Message *</label><br>
-        <textarea id="message" name="message" class="form-element" cols="100" required></textarea>
+        <textarea id="message" name="message" class="form-element" cols="100" minlength="50" required></textarea>
+        <span class="error-message" id="message-error"></span>
       </div>
 
       <div class="form-group checkgroup label">
         <input id="checkbx" name="checkbx" type="checkbox" required>
         <label class="checkbox-label" for="checkbx"> 
-          <span>I consent to being contacted by the team</span>
+          <span>I consent to being contacted by the team *</span>
+          <span class="error-message" id="checkbox-error"></span>
         </label>
       </div>
       
@@ -100,5 +107,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/shukri-isse" target="_blank">Shukri Isse</a>.
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

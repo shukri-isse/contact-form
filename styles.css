@@ -29,7 +29,7 @@ html, body {
 .container {
     background-color: var(--container-color);
     width: 600px;
-    height: 600px;
+    height: 675px;
     border-radius: 15px;
     margin: 2rem auto;
 }
@@ -136,3 +136,14 @@ form {
     gap: 1rem;
     cursor: pointer;
   }
+
+.form-element.error {
+    border: 1px solid red !important;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: none; /* Hide automatically */
+}
